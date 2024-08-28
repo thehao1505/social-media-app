@@ -1,0 +1,15 @@
+version: '3.9'
+services:
+  database:
+    image: postgres:16.2
+    container_name: pose-database
+    ports:
+      - 5434:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Abc12345
+      POSTGRES_DB: scmedia
+    networks:
+      - scmedia-networks
+networks:
+  scmedia-networks:
